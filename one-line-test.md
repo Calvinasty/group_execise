@@ -1,3 +1,2 @@
 Hello world
-Thomas is his name not thomos.
-
+I is got a meeting tonight and I finna leave the class like 5 : 40
