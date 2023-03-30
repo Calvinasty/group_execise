@@ -27,3 +27,5 @@ if (mBmib < jBmib) {
 }else {
     console.log(`John has a lower bmi`)
 }
+
+console.log(`I am 23 years old`)
