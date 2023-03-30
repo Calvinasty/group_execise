@@ -15,7 +15,8 @@ const jBmia = 92 / (1.95 * 1.95)
 console.log(mBmia, jBmia)
 if (mBmia < jBmia) {
     console.log(`Mark has a lower bmi`)
-}else console.log(`John has a lower bmi`)
+}else {console.log(`John has a lower bmi`)
+}
 
 
 const mBmib = 95 / (1.88 ** 2)
@@ -23,4 +24,6 @@ const jBmib = 85 / (1.76 ** 2)
 console.log(mBmib, jBmib)
 if (mBmib < jBmib) {
     console.log(`Mark has a lower bmi`)
-}else console.log(`John has a lower bmi`)
+}else {
+    console.log(`John has a lower bmi`)
+}
