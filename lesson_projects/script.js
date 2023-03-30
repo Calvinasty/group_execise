@@ -1,8 +1,11 @@
-    let js = "amazing"
-    if (js === "amazing") alert ("javascript is fun!")
+let js = "amazing";
+console.log(34 - 75 + 89);
+console.log(js) 
 
-/*
-    let x = 4
-    let y = 6
-    let resultValue = x + y
-    console.log resultValue
+let now = 2023
+let myAge = now - 2004
+let herAge = now - 2000
+console.log(myAge)
+console.log (herAge + myAge)
+const avgAge = herAge + myAge / 2
+console.log(avgAge)
