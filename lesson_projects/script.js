@@ -29,3 +29,15 @@ if (mBmib < jBmib) {
 }
 
 console.log(`I am 23 years old`)
+
+const hasDrLc = false
+const hasGdVs = true
+console.log(hasDrLc && hasGdVs);
+console.log(hasDrLc || hasGdVs);
+console.log(!hasGdVs);
+
+if (hasDrLc || hasGdVs) {
+    console.log(`masa mabl3`)
+} else {
+    console.log(`3kolaa mabl3`)
+}
