@@ -30,14 +30,15 @@ if (mBmib < jBmib) {
 
 console.log(`I am 23 years old`)
 
-const hasDrLc = false
+const hasDrLc = true
 const hasGdVs = true
+const isTired = true
 console.log(hasDrLc && hasGdVs);
 console.log(hasDrLc || hasGdVs);
 console.log(!hasGdVs);
 
-if (hasDrLc || hasGdVs) {
-    console.log(`masa mabl3`)
+if (hasDrLc && hasGdVs && !isTired) {
+    console.log(`sara fi drive`)
 } else {
-    console.log(`3kolaa mabl3`)
+    console.log(`sara no go drive`)
 }
