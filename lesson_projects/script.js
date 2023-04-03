@@ -52,13 +52,20 @@ if (favNum === 24) {
 }*/
 
 const Dolphins = (96 + 108 + 89) / 3
-const Koalas = (88 + 91 + 110) / 3
+const Koalas = (89 + 96 + 108) / 3
 console.log(`At the end of the first round, The Dolphins had ${Dolphins} points and The Koalas had ${Koalas} points`)
 
-if (Koalas > Dolphins) {
+if (Koalas > Dolphins && Koalas >= 100) {
     console.log(`The Koalas Win By ${Koalas} points`)
-} else if (Dolphins > Koalas) {
+} else if (Dolphins > Koalas && Dolphins >= 100) {
     console.log(`The Dolphins win by ${Dolphins} points`)
-} else if (Koalas = Dolphins) {
+} else if (Koalas === Dolphins && Koalas >= 100 && Dolphins >= 100) {
     console.log(`Laidies and Gentlemen we have a tie`)
+}
+else if (Koalas > Dolphins && Koalas < 100) {
+    console.log(`The Koalas Win By ${Koalas} points, but they still did not meet the average of 100 point`)
+} else if (Dolphins > Koalas && Dolphins < 100) {
+    console.log(`The Dolphins win by ${Dolphins} points , but they still did not meet the average of 100 point`)
+} else if (Koalas === Dolphins && Koalas < 100 && Dolphins < 100) {
+    console.log(`Laidies and Gentlemen we have a tie, but they both did not meet the average of 100 point`)
 }
