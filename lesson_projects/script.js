@@ -15,7 +15,8 @@ const jBmia = 92 / (1.95 * 1.95)
 console.log(mBmia, jBmia)
 if (mBmia < jBmia) {
     console.log(`Mark has a lower bmi`)
-}else {console.log(`John has a lower bmi`)
+} else {
+    console.log(`John has a lower bmi`)
 }
 
 
@@ -24,7 +25,7 @@ const jBmib = 85 / (1.76 ** 2)
 console.log(mBmib, jBmib)
 if (mBmib < jBmib) {
     console.log(`Mark has a lower bmi`)
-}else {
+} else {
     console.log(`John has a lower bmi`)
 }
 
@@ -42,3 +43,13 @@ if (hasDrLc && hasGdVs && !isTired) {
 } else {
     console.log(`sara no go drive`)
 }
+let favNum = Number(prompt(`what's yo fave number dude?`))
+
+if (favNum === 24) {
+    console.log(`that's lit dawg it's mine too`)
+} else if (favNum > 50) {
+    console.log(`keep it below 50 dawg`)
+} else {
+    console.log(`cool don ${favNum} is a vibe`)
+}
+
