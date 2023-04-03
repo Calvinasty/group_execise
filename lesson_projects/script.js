@@ -51,8 +51,8 @@ if (favNum === 24) {
     console.log(`cool don ${favNum} is a vibe`)
 }*/
 
-const Dolphins = (96 + 108 + 89) / 3
-const Koalas = (89 + 96 + 108) / 3
+const Dolphins = (97 + 112 + 101) / 3
+const Koalas = (109 + 95 + 106) / 3
 console.log(`At the end of the first round, The Dolphins had ${Dolphins} points and The Koalas had ${Koalas} points`)
 
 if (Koalas > Dolphins && Koalas >= 100) {
