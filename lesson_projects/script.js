@@ -51,21 +51,21 @@ if (favNum === 24) {
     console.log(`cool don ${favNum} is a vibe`)
 }*/
 
-const Dolphins = (97 + 112 + 101) / 3
-const Koalas = (109 + 95 + 106) / 3
+const Dolphins = ((97 + 112 + 101) / 3).toFixed(2);
+const Koalas = ((109 + 95 + 106) / 3).toFixed(2);
 console.log(`At the end of the first round, The Dolphins had ${Dolphins} points and The Koalas had ${Koalas} points`)
 
 if (Koalas > Dolphins && Koalas >= 100) {
-    console.log(`The Koalas Win By ${Koalas} points`)
+    console.log(`The Koalas Win the Trophy 🏆 By ${Koalas} points`)
 } else if (Dolphins > Koalas && Dolphins >= 100) {
-    console.log(`The Dolphins win by ${Dolphins} points`)
+    console.log(`The Dolphins win the Trophy 🏆 by ${Dolphins} points`)
 } else if (Koalas === Dolphins && Koalas >= 100 && Dolphins >= 100) {
     console.log(`Laidies and Gentlemen we have a tie`)
 }
 else if (Koalas > Dolphins && Koalas < 100) {
-    console.log(`The Koalas Win By ${Koalas} points, but they still did not meet the average of 100 point`)
+    console.log(`The Koalas Win the Trophy 🏆 By ${Koalas} points, but they still did not meet the average of 100 point`)
 } else if (Dolphins > Koalas && Dolphins < 100) {
-    console.log(`The Dolphins win by ${Dolphins} points , but they still did not meet the average of 100 point`)
+    console.log(`The Dolphins win the Trophy 🏆 by ${Dolphins} points , but they still did not meet the average of 100 point`)
 } else if (Koalas === Dolphins && Koalas < 100 && Dolphins < 100) {
     console.log(`Laidies and Gentlemen we have a tie, but they both did not meet the average of 100 point`)
 }
