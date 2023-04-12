@@ -167,3 +167,23 @@ race(`vroom`)//this calls the fx based on the set params. our params make it abl
 let result = sum(5, 8)
 console.log(`${result}`)
 */
+
+//classes
+//format class student {
+//            constructor(var(s) eg.name)
+//        this.var(name) = var(name)
+//} then  use the `new` to apply class i.e let X = new student(`Ken`)
+// this means we've ref'd x to the class student and his var (name) is Ken
+//how it works
+class student {
+    constructor(name, dob, grade) {
+        this.name = name
+        this.dob = dob
+        this.grade = grade
+    }
+} //now to use this class;
+
+let Ben = new student(`Ben`, `2004-11-24`, `grade 10`)
+let Leon = new student(`Leon`, `2001-1-4`, `grade 12`)
+let Jenny = new student(`Jenny`, `2014-11-20`, `grade 3`)
+//so these 3 items r ref'd to the class students and themma vars r filled.
