@@ -84,7 +84,7 @@ if (x % 2 === 0) {
 
 
 //switch
-const day = `friday`
+/*const day = `friday`
 
 switch (day) {
     case `monday`:
@@ -98,8 +98,7 @@ switch (day) {
     default:
         console.log(`i was tired typing`)
 }//without the break, the code will continue executing even if it's a dy.dx case plus its purporsly for equality so comparisms y3 ly bi, it uses ===
-
-
+/*
 
 
 //loops
