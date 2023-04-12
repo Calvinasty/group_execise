@@ -259,4 +259,33 @@ function makeApiCall() {
 //if we create something to run based on the fx above after the timeout or delay thats is a callback promise, wahy3 bc s3 after 5 secs cb3san afr3 api no biom. so we must create somthing to dispaly afterwarda to actually know if the callback happend.....
 
 makeApiCall()
-    .then(result) 
+    .then((result) => {
+        console.log(result)
+        return result;//so this block will log the origional result
+    })
+    .then((result) => {
+        console.log(result.toUpperCase())
+        return result//then this will log the result in capital letter
+    })
+    .then((result) => console.log(result.toLowerCase()))//then this will log r in sml letrs
+
+    .catch((e) => console.log(e))//in case an error is thrown from the execution this catch block no b3kye no then will handle it, so here we set it to log the error code(i.e (e))
+    .finally(() => {
+        console.log('everything is okay, api call ended')
+    })//this specifies the final code to execute.
+
+    //this works fine but the code is sometimes plenty and simple
+    //the async method makes it simple
+    //test below
+    (async () => {
+        try {
+            const response = await makeApiCall();
+            console.log(response);
+            console.log(response.toUpperCase());
+            console.log(response.toLowerCase());
+            console.log('something')
+        } catch (err) {
+            console.log(err);
+        }
+    })()//so this will do the same thing but requires less code
+
