@@ -175,9 +175,9 @@ console.log(`${result}`)
 //} (to set or get place this in.... [this.var(name) = var(name)])
 //then  use the `new` to apply class i.e let X = new student(`Ken`)
 // this means we've ref'd x to the class student and his var (name) is Ken
-//could be that it uses a constructor or not. However even with no constructor by default it has an empty constructor. 
+//could be that it uses a constructor or not. However even with no constructor by default it has an empty constructor.
 //example
-const year = 2023 //var to calc age
+/* const year = 2023 //var to calc age
 const moment = require('moment'); // Install moment.js (npm install moment) library also to aid age calculation
 class student {
     constructor(name, mom, dob, grade) {
@@ -186,7 +186,7 @@ class student {
         dob = undefined
         grade = undefined
     }
-    //now to apply these 3 items for an object that will use this class  use the 'set'. 
+    //now to apply these 3 items for an object that will use this class  use the 'set'.
     //so create a set for each thing in the class
 
     setName(newValue) {
@@ -205,7 +205,7 @@ class student {
         this.grade = newValue
     }
 
-    //This get here is used tho get the items we created with setters.        
+    //This get here is used tho get the items we created with setters.
 
     getName() {
         return this.name
@@ -240,3 +240,23 @@ Ben.setDob(`2011-11-11`)
 Ben.setGrade(`grade 8`)
 console.log(Ben)//to show all about ben
 console.log(Ben.getDob())//to show only his age
+*/
+
+
+//PROMISES & Callbacks
+//an object whose block wont be retrieved now but will be referred by a call back
+//a call back is a method passed in as an argument of another function
+//lets write a method that returns a promise
+function makeApiCall() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(`api return response`)
+            //reject(`api did not return right response`)
+            //we need only one of these 2 so if it comes use res and //rej and vice versa
+        }, 5000)//5 secs timeout before callback
+    })
+} //so this is the fx we created, we r making an api call
+//if we create something to run based on the fx above after the timeout or delay thats is a callback promise, wahy3 bc s3 after 5 secs cb3san afr3 api no biom. so we must create somthing to dispaly afterwarda to actually know if the callback happend.....
+
+makeApiCall()
+    .then(result) 
