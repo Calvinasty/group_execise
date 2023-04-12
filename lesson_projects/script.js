@@ -169,21 +169,74 @@ console.log(`${result}`)
 */
 
 //classes
+//a class is the bluebrint of an object
 //format class student {
 //            constructor(var(s) eg.name)
-//        this.var(name) = var(name)
-//} then  use the `new` to apply class i.e let X = new student(`Ken`)
+//} (to set or get place this in.... [this.var(name) = var(name)])
+//then  use the `new` to apply class i.e let X = new student(`Ken`)
 // this means we've ref'd x to the class student and his var (name) is Ken
-//how it works
+//could be that it uses a constructor or not. However even with no constructor by default it has an empty constructor. 
+//example
+const year = 2023 //var to calc age
+const moment = require('moment'); // Install moment.js (npm install moment) library also to aid age calculation
 class student {
-    constructor(name, dob, grade) {
-        this.name = name
-        this.dob = dob
-        this.grade = grade
+    constructor(name, mom, dob, grade) {
+        name = undefined
+        mom = undefined
+        dob = undefined
+        grade = undefined
     }
-} //now to use this class;
+    //now to apply these 3 items for an object that will use this class  use the 'set'. 
+    //so create a set for each thing in the class
 
-let Ben = new student(`Ben`, `2004-11-24`, `grade 10`)
-let Leon = new student(`Leon`, `2001-1-4`, `grade 12`)
-let Jenny = new student(`Jenny`, `2014-11-20`, `grade 3`)
-//so these 3 items r ref'd to the class students and themma vars r filled.
+    setName(newValue) {
+        this.name = newValue
+    }
+
+    setMom(newValue) {
+        this.mom = newValue
+    }
+
+    setDob(newValue) {
+        this.dob = moment(newValue, 'YYYY-MM-DD') //to pass date string using moment.js for date calculation
+    }
+
+    setGrade(newValue) {
+        this.grade = newValue
+    }
+
+    //This get here is used tho get the items we created with setters.        
+
+    getName() {
+        return this.name
+    } //to show/call name
+
+    getMom() {
+        return this.mom
+    } //to show mom
+
+    getDob() {
+        const ageInYears = year - this.dob.year(); // Calculate age based on year constant and year of birth
+        const formattedDate = this.dob.format('MMMM Do, YYYY'); // Format date using moment.js
+        return `${formattedDate} (${ageInYears} years old)`;
+    } //to show dob and calculate age
+
+    getGrade() {
+        return this.grade
+    } //to show grade
+
+}
+
+
+//finaly create stuff to apply yur class (i.e student)
+let Ben = new student() //so now ben here is new and so if u console log him he's undefined
+console.log(Ben) //this will return an empty somthing.
+//tu set name for ben call setname
+Ben.setName(`Benjamin`)//now if we log we shld see his name
+console.log(Ben) //and that's exactly what happend
+//so set his other details too na y3nkc....
+Ben.setMom(`Akosua`)
+Ben.setDob(`2011-11-11`)
+Ben.setGrade(`grade 8`)
+console.log(Ben)//to show all about ben
+console.log(Ben.getDob())//to show only his age
