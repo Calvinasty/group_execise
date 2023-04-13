@@ -1,4 +1,6 @@
 const PostController = require('../controllers/post.controller')
+const Validator = require('../validators/validator')
+const PostValidator = require('../validators/post.validator')
 
 const routes = (app) => {
     app.post('/posts', PostController.store);

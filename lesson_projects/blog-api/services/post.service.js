@@ -1,4 +1,4 @@
-const PostRepository = require('../respositories/post.repository')
+const PostRepository = require('../repositories/post.repository')
 const crypto = require('crypto');//imported to generate uuid
 
 class PostService {
