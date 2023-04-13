@@ -17,6 +17,7 @@ class PostRepository {
 
     static findIndex(uuid) {
         const index = posts.findIndex(item => item.uuid === uuid)
+        return index;
     }//finds an index for id in case a post finna be deleted
 
     static delete(index) {

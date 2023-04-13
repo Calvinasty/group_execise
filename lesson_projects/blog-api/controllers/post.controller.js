@@ -30,10 +30,10 @@ class PostController {
         if (!isDeleted) {
             return res.status(404).json({ message: `post doesnt exist` })
         }
-        res.status(204)
+        res.status(204).json()
     }//for post deletion
 
-    static delete(req, res) {
+    static update(req, res) {
         const uuid = req.params.uuid
         const body = req.body
 
