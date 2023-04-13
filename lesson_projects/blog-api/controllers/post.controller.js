@@ -6,6 +6,11 @@ class PostController {
         const post = PostService.store(body); //call post service
         res.status(201).json(post)
     }
+
+    static findAll(req, res) {
+        const post = PostService.findAll()
+        res.json(posts)
+    }
 }
 //so it takes the req u pass from yur app like postman and takes it thru postservice and adds it to the post array 
 module.exports = PostController

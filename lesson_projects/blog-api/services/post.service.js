@@ -11,6 +11,11 @@ class PostService {
         const post = PostRepository.store(data);//so with this he passed the complete data(which the post with its uuid and its slug) to the post.repo.js file to be added to the array
         return post;
     }
-}
+
+    static findAll() {
+        const post = PostRepository.findAll()
+        return posts
+    }
+}//to find all posts
 
 module.exports = PostService
