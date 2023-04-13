@@ -31,6 +31,19 @@ class PostService {
         PostRepository.delete(postIndex)
         return true
     }
+
+    static update(uuid, data) {
+        const postIndex = PostRepository.findIndex(uuid)
+        if (postIndex === -1) {
+            return false
+        }
+        const slug = data['title'].split('').join('-')
+        data['uuid'] = slug.toLowerCase()
+        data['slug'] = uuid
+
+        const updatedPost = PostRepository.update(postIndex, data)
+        return updatedPost;
+    }
 }
 
 module.exports = PostService

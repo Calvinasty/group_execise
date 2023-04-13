@@ -1,5 +1,6 @@
 const { response } = require('express');
-const PostService = require('../services/post.service') //import post service here
+const PostService = require('../services/post.service'); //import post service here
+const { json } = require('body-parser');
 
 class PostController {
     static store(req, res) {
@@ -18,11 +19,30 @@ class PostController {
         const post = PostService.find(slug)
         console.log(post)
         if (!post) {
-            res.status(404).json({ message: `post doesn't exist` })
+            return res.status(404).json({ message: `post doesn't exist` })
         }//shows this if post is not found
         res.json(post)//if post is there returns it
     }//to find specific using slug and if the slug(which reps the post) doesnt exist return 404(error code) 
 
+    static delete(req, res) {
+        const uuid = req.params.uuid
+        const isDeleted = PostService.delete(uuid)
+        if (!isDeleted) {
+            return res.status(404).json({ message: `post doesnt exist` })
+        }
+        res.status(204)
+    }//for post deletion
+
+    static delete(req, res) {
+        const uuid = req.params.uuid
+        const body = req.body
+
+        const updatedPost = PostService.update(uuid, body)
+        if (!updatedPost) {
+            return res.status(404).json({ message: `post doesn't exist` })
+        }
+        res.json(updatedPost)
+    }
 }
 //so it takes the req u pass from yur app like postman and takes it thru postservice and adds it to the post array 
 module.exports = PostController

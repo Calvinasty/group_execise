@@ -23,6 +23,10 @@ class PostRepository {
         posts.splice(index, 1)
     }
 
+    static update(index, data) {
+        posts[index] = data;
+        return posts[index]
+    }
 
 }
 //we created an fx called store; static store part no => adds to the array of posts(const posts no!). return post part => searches the array(const posts) for the newly added post using the uuid amd then returns the post
