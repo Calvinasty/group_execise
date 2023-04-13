@@ -18,7 +18,8 @@ class PostController {
         const post = PostService.find()
         if (post === null) {
             res.status(404).json({ message: `post not found` })
-        }
+        }//shows this if post is null
+        res.json(post)//if post is there returns it
     }//to find specific using slug and if the slug(which reps the post) doesnt exist return 404(error code) 
 
 }
