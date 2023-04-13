@@ -1,3 +1,4 @@
+const { response } = require('express');
 const PostService = require('../services/post.service') //import post service here
 
 class PostController {
@@ -8,9 +9,18 @@ class PostController {
     }
 
     static findAll(req, res) {
-        const post = PostService.findAll()
+        const posts = PostService.findAll()
         res.json(posts)
-    }
+    }//finds all post and sends a response in a form of json
+
+    static find(req, res) {
+        const slug = req.params.slug
+        const post = PostService.find()
+        if (post === null) {
+            res.status(404).json({ message: `post not found` })
+        }
+    }//to find specific using slug and if the slug(which reps the post) doesnt exist return 404(error code) 
+
 }
 //so it takes the req u pass from yur app like postman and takes it thru postservice and adds it to the post array 
 module.exports = PostController

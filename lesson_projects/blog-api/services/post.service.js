@@ -13,9 +13,14 @@ class PostService {
     }
 
     static findAll() {
-        const post = PostRepository.findAll()
+        const posts = PostRepository.findAll()
         return posts
-    }
-}//to find all posts
+    }//to find all posts
+
+    static find(slug) {
+        const post = PostRepository.find(slug)
+        return post
+    }//to find specific post
+}
 
 module.exports = PostService
