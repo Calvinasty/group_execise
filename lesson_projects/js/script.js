@@ -98,7 +98,19 @@ switch (day) {
     default:
         console.log(`i was tired typing`)
 }//without the break, the code will continue executing even if it's a dy.dx case plus its purporsly for equality so comparisms y3 ly bi, it uses ===
-/*
+*/
+
+//The conditional/ turnery operator(? :)
+/*let age = 19
+age >= 18 ? console.log(`m3nom bear`) : console.log(`ma me nsuo wae`)
+//can be stored as a variable since it retrurns a result and is der4 an xpresion
+*/
+
+
+
+
+
+
 
 
 //loops
@@ -247,7 +259,7 @@ console.log(Ben.getDob())//to show only his age
 //an object whose block wont be retrieved now but will be referred by a call back
 //a call back is a method passed in as an argument of another function
 //lets write a method that returns a promise
-function makeApiCall() {
+/*function makeApiCall() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(`api return response`)
@@ -273,4 +285,4 @@ makeApiCall()
     .finally(() => {
         console.log('everything is okay, api call ended')
     })//this specifies the final code to execute.
-
+*/
