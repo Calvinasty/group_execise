@@ -37,9 +37,9 @@ class PostService {
         if (postIndex === -1) {
             return false
         }
-        const slug = data['title'].split('').join('-')
-        data['uuid'] = slug.toLowerCase()
-        data['slug'] = uuid
+        const slug = data['title'].split(' ').join('-')
+        data['slug'] = slug.toLowerCase()
+        data['uuid'] = uuid
 
         const updatedPost = PostRepository.update(postIndex, data)
         return updatedPost;
