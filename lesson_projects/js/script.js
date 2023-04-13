@@ -274,18 +274,3 @@ makeApiCall()
         console.log('everything is okay, api call ended')
     })//this specifies the final code to execute.
 
-    //this works fine but the code is sometimes plenty and simple
-    //the async method makes it simple
-    //test below
-    (async () => {
-        try {
-            const response = await makeApiCall();
-            console.log(response);
-            console.log(response.toUpperCase());
-            console.log(response.toLowerCase());
-            console.log('something')
-        } catch (err) {
-            console.log(err);
-        }
-    })()//so this will do the same thing but requires less code
-
