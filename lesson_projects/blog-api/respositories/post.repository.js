@@ -25,6 +25,6 @@ class PostRepository {
 
 
 }
-//we created an fx called store; static store part => adds to the array of posts(const posts no!). return post part => searches the array(const posts) for the newly added post using the uuid amd then returns the post
+//we created an fx called store; static store part no => adds to the array of posts(const posts no!). return post part => searches the array(const posts) for the newly added post using the uuid amd then returns the post
 
 module.exports = PostRepository

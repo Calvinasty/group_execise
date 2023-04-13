@@ -21,6 +21,16 @@ class PostService {
         const post = PostRepository.find(slug)
         return post
     }//to find specific post
+
+    static delete(uuid) {
+        const postIndex = PostRepository.findIndex(uuid)
+        if (postIndex === -1) {
+            //i.e post not found
+            return false
+        }
+        PostRepository.delete(postIndex)
+        return true
+    }
 }
 
 module.exports = PostService
