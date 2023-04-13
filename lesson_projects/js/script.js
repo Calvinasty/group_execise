@@ -1,3 +1,6 @@
+const express = require('express')
+
+
 /*let js = "amazing";
 console.log(34 - 75 + 89);
 console.log(js)*/
@@ -289,3 +292,13 @@ makeApiCall()
         }
     })()//so this will do the same thing but requires less code
 
+
+
+
+
+
+
+
+app.listen(2600, () => {
+    console.log('app started on port 2600')
+})
