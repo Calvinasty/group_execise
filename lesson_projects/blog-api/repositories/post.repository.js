@@ -29,7 +29,11 @@ class PostRepository {
         return posts[index]
     }//edit and update post
 
-    static findByTitle
+    static findByTitle(title) {
+        const index = posts.findIndex(item => item.title === title)
+        return index;
+    }//find post by title
+
 
 }
 //we created an fx called store; static store part no => adds to the array of posts(const posts no!). return post part => searches the array(const posts) for the newly added post using the uuid amd then returns the post
