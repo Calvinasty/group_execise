@@ -106,6 +106,23 @@ age >= 18 ? console.log(`m3nom bear`) : console.log(`ma me nsuo wae`)
 //can be stored as a variable since it retrurns a result and is der4 an xpresion
 */
 
+//code xx
+const bill = 23
+let tipA = (15 * bill) / 100
+let tipB = (20 * bill) / 100
+let totalA = bill + tipA
+let totalB = bill + tipB
+
+if (bill >= 50 && bill <= 300) {
+    console.log(`Your Bill is: ${bill} USD, and you tipped the waiter: ${tipA} USD.`)
+    console.log(`The total is ${totalA} USD.`)
+} else if (bill > 300) {
+    console.log(`Your Bill is: ${bill} USD, and you tipped the waiter: ${tipB} USD.`)
+    console.log(`The total is ${totalB} USD.`)
+} else {
+    console.log(`Your Bill is: ${bill} USD`)
+}
+
 
 
 
